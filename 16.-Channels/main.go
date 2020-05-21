@@ -10,9 +10,8 @@ func main() {
 	go loop(channel)
 	fmt.Println("Legué hasta aquí")
 
-	// Espera a que el buble devuelva un valor en el canal para terminar, similar al await en node
-	// Espera a que canal tenga un valor y lo grabe en la variable msg antes de terminar la ejecución del programa
-	// Hasta que esto no ocurra, el programa no continua
+	// Espera a que el canal tenga un valor y lo grabe en la variable msg antes de terminar la ejecución del programa
+	// Hasta que esto no ocurra, el programa no continua. Similar al await en node
 	msg := <-channel
 	fmt.Println(msg)
 }
